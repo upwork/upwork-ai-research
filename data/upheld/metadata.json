@@ -1,0 +1,1291 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "cr": "http://mlcommons.org/croissant/1.0/"
+  },
+  "@type": "Dataset",
+  "name": "UPHELD",
+  "datePublished": "2024-03-13",
+  "version": "1.0.0",
+  "description": "UPHELD (UPwork Human Evaluated Longer Dialogues) Dataset: a comprehensive, publicly available dataset featuring human-annotated long-form dialogues",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "url": "https://example.com/dataset/recipes/minimal-recommended",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "distribution": [
+      {
+      "@type": "https://schema.org/FileObject",
+      "@id": "annotator_1.csv",
+      "name": "annotator_1.csv",
+      "contentUrl": "annotator_1.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "72c3aefc5a3f14cc8c16b18641c055a97173fa5854e69fe39acd59d884afe44e"
+    },
+    {
+      "@type": "https://schema.org/FileObject",
+      "@id": "annotator_2.csv",
+      "name": "annotator_2.csv",
+      "contentUrl": "annotator_2.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "c9365bb8689e9be7a40d894a616bc60b290aa577ebe6e69e5808550d14539a7f"
+    },
+    {
+      "@type": "https://schema.org/FileObject",
+      "@id": "annotator_3.csv",
+      "name": "annotator_3.csv",
+      "contentUrl": "annotator_3.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "b15085a48aa66bbce92053ffb4aae74778096a499208f2bfb1345a3af1928673"
+    },
+    {
+      "@type": "https://schema.org/FileObject",
+      "@id": "annotator_4.csv",
+      "name": "annotator_4.csv",
+      "contentUrl": "annotator_4.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "734e6e4d25c77deecc04e9c1b18379e9d7737dea8b9672ca3c25f9bfe8d90ef8"
+    },
+    {
+      "@type": "https://schema.org/FileObject",
+      "@id": "annotator_5.csv",
+      "name": "annotator_5.csv",
+      "contentUrl": "annotator_5.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "734e6e4d25c77deecc04e9c1b18379e9d7737dea8b9672ca3c25f9bfe8d90ef8"
+    },
+    {
+      "@type": "https://schema.org/FileObject",
+      "@id": "annotator_6.csv",
+      "name": "annotator_6.csv",
+      "contentUrl": "annotator_6.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "f575729e2cd68d9fadb58c391d6e0fad8a6073fd972e436d6c839c0027399a20"
+    },
+    {
+      "@type": "https://schema.org/FileObject",
+      "@id": "annotator_7.csv",
+      "name": "annotator_7.csv",
+      "contentUrl": "annotator_7.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "363acfb6c378cbfcdf302347a6d3801f8ac8554b22225f9e67bb43dffdd00a90"
+    },
+    {
+      "@type": "https://schema.org/FileObject",
+      "@id": "annotator_8.csv",
+      "name": "annotator_8.csv",
+      "contentUrl": "annotator_8.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "91c011de5f3d06a491cb14a2699374454377cc0f34cf0a450bfc8563ee927b8c"
+    }
+    ,
+    {
+      "@type": "https://schema.org/FileObject",
+      "@id": "annotator_9.csv",
+      "name": "annotator_9.csv",
+      "contentUrl": "annotator_9.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "bfb39fc5e734e15483ee600197bfb8d1838586e73734fea3527df34fa1d34815"
+    },
+    {
+      "@type": "https://schema.org/FileObject",
+      "@id": "annotator_10.csv",
+      "name": "annotator_10.csv",
+      "contentUrl": "annotator_10.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "4bb9fe1f92bd1f422a53f28a9b0763039e15981ed3be9655288a152ce1ef7cf0"
+    }
+
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "name": "annotations",
+      "description": "Records extracted from the example table, with their schema.",
+      "fields": [
+        {
+          "@type": "cr:Field",
+          "name": "chat_history",
+          "description": "A string containing the full dialogue between the user and the assistant, with turns separated by newlines.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_1.csv"
+            },
+            "extract": {
+              "column": "chat_history"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "Option A",
+          "description": "A string containing the full dialogue between the user and the assistant, with turns separated by newlines.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_1.csv"
+            },
+            "extract": {
+              "column": "Option A"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "Option B",
+          "description": "A string representing the model output as a continuation to the conversation in chat_history column.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_1.csv"
+            },
+            "extract": {
+              "column": "Option B"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "score_task_1_content",
+          "description": "A numerical rating indicating the level of content overlap between Option A and Option B.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_1.csv"
+            },
+            "extract": {
+              "column": "score_task_1_content"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "score_task_2_style",
+          "description": "A numerical rating indicating the level of style overlap between Option A and Option B.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_1.csv"
+            },
+            "extract": {
+              "column": "score_task_2_style"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "score_task_3_reasonableness",
+          "description": "A numerical rating indicating how reasonable Option B is as a continuation of the dialogue in chat_history column.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_1.csv"
+            },
+            "extract": {
+              "column": "score_task_3_reasonableness"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "model",
+          "description": "The name of the language model that generated Option B response.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_1.csv"
+            },
+            "extract": {
+              "column": "model"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "id_annotated",
+          "description": "The id of the annotated data point.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_1.csv"
+            },
+            "extract": {
+              "column": "id_annotated"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "name": "annotations",
+      "description": "Records extracted from the example table, with their schema.",
+      "fields": [
+        {
+          "@type": "cr:Field",
+          "name": "chat_history",
+          "description": "A string containing the full dialogue between the user and the assistant, with turns separated by newlines.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_2.csv"
+            },
+            "extract": {
+              "column": "chat_history"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "Option A",
+          "description": "A string containing the full dialogue between the user and the assistant, with turns separated by newlines.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_2.csv"
+            },
+            "extract": {
+              "column": "Option A"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "Option B",
+          "description": "A string representing the model output as a continuation to the conversation in chat_history column.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_2.csv"
+            },
+            "extract": {
+              "column": "Option B"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "score_task_1_content",
+          "description": "A numerical rating indicating the level of content overlap between Option A and Option B.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_2.csv"
+            },
+            "extract": {
+              "column": "score_task_1_content"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "score_task_2_style",
+          "description": "A numerical rating indicating the level of style overlap between Option A and Option B.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_2.csv"
+            },
+            "extract": {
+              "column": "score_task_2_style"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "score_task_3_reasonableness",
+          "description": "A numerical rating indicating how reasonable Option B is as a continuation of the dialogue in chat_history column.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_2.csv"
+            },
+            "extract": {
+              "column": "score_task_3_reasonableness"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "model",
+          "description": "The name of the language model that generated Option B response.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_2.csv"
+            },
+            "extract": {
+              "column": "model"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "id_annotated",
+          "description": "The id of the annotated data point.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_2.csv"
+            },
+            "extract": {
+              "column": "id_annotated"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "name": "annotations",
+      "description": "Records extracted from the example table, with their schema.",
+      "fields": [
+        {
+          "@type": "cr:Field",
+          "name": "chat_history",
+          "description": "A string containing the full dialogue between the user and the assistant, with turns separated by newlines.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_3.csv"
+            },
+            "extract": {
+              "column": "chat_history"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "Option A",
+          "description": "A string containing the full dialogue between the user and the assistant, with turns separated by newlines.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_3.csv"
+            },
+            "extract": {
+              "column": "Option A"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "Option B",
+          "description": "A string representing the model output as a continuation to the conversation in chat_history column.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_3.csv"
+            },
+            "extract": {
+              "column": "Option B"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "score_task_1_content",
+          "description": "A numerical rating indicating the level of content overlap between Option A and Option B.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_3.csv"
+            },
+            "extract": {
+              "column": "score_task_1_content"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "score_task_2_style",
+          "description": "A numerical rating indicating the level of style overlap between Option A and Option B.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_3.csv"
+            },
+            "extract": {
+              "column": "score_task_2_style"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "score_task_3_reasonableness",
+          "description": "A numerical rating indicating how reasonable Option B is as a continuation of the dialogue in chat_history column.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_3.csv"
+            },
+            "extract": {
+              "column": "score_task_3_reasonableness"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "model",
+          "description": "The name of the language model that generated Option B response.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_3.csv"
+            },
+            "extract": {
+              "column": "model"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "id_annotated",
+          "description": "The id of the annotated data point.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_3.csv"
+            },
+            "extract": {
+              "column": "id_annotated"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "name": "annotations",
+      "description": "Records extracted from the example table, with their schema.",
+      "fields": [
+        {
+          "@type": "cr:Field",
+          "name": "chat_history",
+          "description": "A string containing the full dialogue between the user and the assistant, with turns separated by newlines.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_4.csv"
+            },
+            "extract": {
+              "column": "chat_history"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "Option A",
+          "description": "A string containing the full dialogue between the user and the assistant, with turns separated by newlines.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_4.csv"
+            },
+            "extract": {
+              "column": "Option A"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "Option B",
+          "description": "A string representing the model output as a continuation to the conversation in chat_history column.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_4.csv"
+            },
+            "extract": {
+              "column": "Option B"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "score_task_1_content",
+          "description": "A numerical rating indicating the level of content overlap between Option A and Option B.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_4.csv"
+            },
+            "extract": {
+              "column": "score_task_1_content"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "score_task_2_style",
+          "description": "A numerical rating indicating the level of style overlap between Option A and Option B.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_4.csv"
+            },
+            "extract": {
+              "column": "score_task_2_style"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "score_task_3_reasonableness",
+          "description": "A numerical rating indicating how reasonable Option B is as a continuation of the dialogue in chat_history column.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_4.csv"
+            },
+            "extract": {
+              "column": "score_task_3_reasonableness"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "model",
+          "description": "The name of the language model that generated Option B response.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_4.csv"
+            },
+            "extract": {
+              "column": "model"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "id_annotated",
+          "description": "The id of the annotated data point.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_4.csv"
+            },
+            "extract": {
+              "column": "id_annotated"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "name": "annotations",
+      "description": "Records extracted from the example table, with their schema.",
+      "fields": [
+        {
+          "@type": "cr:Field",
+          "name": "chat_history",
+          "description": "A string containing the full dialogue between the user and the assistant, with turns separated by newlines.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_5.csv"
+            },
+            "extract": {
+              "column": "chat_history"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "Option A",
+          "description": "A string containing the full dialogue between the user and the assistant, with turns separated by newlines.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_5.csv"
+            },
+            "extract": {
+              "column": "Option A"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "Option B",
+          "description": "A string representing the model output as a continuation to the conversation in chat_history column.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_5.csv"
+            },
+            "extract": {
+              "column": "Option B"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "score_task_1_content",
+          "description": "A numerical rating indicating the level of content overlap between Option A and Option B.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_5.csv"
+            },
+            "extract": {
+              "column": "score_task_1_content"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "score_task_2_style",
+          "description": "A numerical rating indicating the level of style overlap between Option A and Option B.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_5.csv"
+            },
+            "extract": {
+              "column": "score_task_2_style"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "score_task_3_reasonableness",
+          "description": "A numerical rating indicating how reasonable Option B is as a continuation of the dialogue in chat_history column.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_5.csv"
+            },
+            "extract": {
+              "column": "score_task_3_reasonableness"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "model",
+          "description": "The name of the language model that generated Option B response.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_5.csv"
+            },
+            "extract": {
+              "column": "model"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "id_annotated",
+          "description": "The id of the annotated data point.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_5.csv"
+            },
+            "extract": {
+              "column": "id_annotated"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "name": "annotations",
+      "description": "Records extracted from the example table, with their schema.",
+      "fields": [
+        {
+          "@type": "cr:Field",
+          "name": "chat_history",
+          "description": "A string containing the full dialogue between the user and the assistant, with turns separated by newlines.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_6.csv"
+            },
+            "extract": {
+              "column": "chat_history"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "Option A",
+          "description": "A string containing the full dialogue between the user and the assistant, with turns separated by newlines.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_6.csv"
+            },
+            "extract": {
+              "column": "Option A"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "Option B",
+          "description": "A string representing the model output as a continuation to the conversation in chat_history column.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_6.csv"
+            },
+            "extract": {
+              "column": "Option B"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "score_task_1_content",
+          "description": "A numerical rating indicating the level of content overlap between Option A and Option B.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_6.csv"
+            },
+            "extract": {
+              "column": "score_task_1_content"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "score_task_2_style",
+          "description": "A numerical rating indicating the level of style overlap between Option A and Option B.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_6.csv"
+            },
+            "extract": {
+              "column": "score_task_2_style"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "score_task_3_reasonableness",
+          "description": "A numerical rating indicating how reasonable Option B is as a continuation of the dialogue in chat_history column.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_6.csv"
+            },
+            "extract": {
+              "column": "score_task_3_reasonableness"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "model",
+          "description": "The name of the language model that generated Option B response.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_6.csv"
+            },
+            "extract": {
+              "column": "model"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "id_annotated",
+          "description": "The id of the annotated data point.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_6.csv"
+            },
+            "extract": {
+              "column": "id_annotated"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "name": "annotations",
+      "description": "Records extracted from the example table, with their schema.",
+      "fields": [
+        {
+          "@type": "cr:Field",
+          "name": "chat_history",
+          "description": "A string containing the full dialogue between the user and the assistant, with turns separated by newlines.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_7.csv"
+            },
+            "extract": {
+              "column": "chat_history"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "Option A",
+          "description": "A string containing the full dialogue between the user and the assistant, with turns separated by newlines.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_7.csv"
+            },
+            "extract": {
+              "column": "Option A"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "Option B",
+          "description": "A string representing the model output as a continuation to the conversation in chat_history column.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_7.csv"
+            },
+            "extract": {
+              "column": "Option B"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "score_task_1_content",
+          "description": "A numerical rating indicating the level of content overlap between Option A and Option B.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_7.csv"
+            },
+            "extract": {
+              "column": "score_task_1_content"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "score_task_2_style",
+          "description": "A numerical rating indicating the level of style overlap between Option A and Option B.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_7.csv"
+            },
+            "extract": {
+              "column": "score_task_2_style"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "score_task_3_reasonableness",
+          "description": "A numerical rating indicating how reasonable Option B is as a continuation of the dialogue in chat_history column.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_7.csv"
+            },
+            "extract": {
+              "column": "score_task_3_reasonableness"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "model",
+          "description": "The name of the language model that generated Option B response.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_7.csv"
+            },
+            "extract": {
+              "column": "model"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "id_annotated",
+          "description": "The id of the annotated data point.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_7.csv"
+            },
+            "extract": {
+              "column": "id_annotated"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "name": "annotations",
+      "description": "Records extracted from the example table, with their schema.",
+      "fields": [
+        {
+          "@type": "cr:Field",
+          "name": "chat_history",
+          "description": "A string containing the full dialogue between the user and the assistant, with turns separated by newlines.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_8.csv"
+            },
+            "extract": {
+              "column": "chat_history"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "Option A",
+          "description": "A string containing the full dialogue between the user and the assistant, with turns separated by newlines.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_8.csv"
+            },
+            "extract": {
+              "column": "Option A"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "Option B",
+          "description": "A string representing the model output as a continuation to the conversation in chat_history column.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_8.csv"
+            },
+            "extract": {
+              "column": "Option B"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "score_task_1_content",
+          "description": "A numerical rating indicating the level of content overlap between Option A and Option B.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_8.csv"
+            },
+            "extract": {
+              "column": "score_task_1_content"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "score_task_2_style",
+          "description": "A numerical rating indicating the level of style overlap between Option A and Option B.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_8.csv"
+            },
+            "extract": {
+              "column": "score_task_2_style"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "score_task_3_reasonableness",
+          "description": "A numerical rating indicating how reasonable Option B is as a continuation of the dialogue in chat_history column.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_8.csv"
+            },
+            "extract": {
+              "column": "score_task_3_reasonableness"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "model",
+          "description": "The name of the language model that generated Option B response.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_8.csv"
+            },
+            "extract": {
+              "column": "model"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "id_annotated",
+          "description": "The id of the annotated data point.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_8.csv"
+            },
+            "extract": {
+              "column": "id_annotated"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "name": "annotations",
+      "description": "Records extracted from the example table, with their schema.",
+      "fields": [
+        {
+          "@type": "cr:Field",
+          "name": "chat_history",
+          "description": "A string containing the full dialogue between the user and the assistant, with turns separated by newlines.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_9.csv"
+            },
+            "extract": {
+              "column": "chat_history"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "Option A",
+          "description": "A string containing the full dialogue between the user and the assistant, with turns separated by newlines.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_9.csv"
+            },
+            "extract": {
+              "column": "Option A"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "Option B",
+          "description": "A string representing the model output as a continuation to the conversation in chat_history column.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_9.csv"
+            },
+            "extract": {
+              "column": "Option B"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "score_task_1_content",
+          "description": "A numerical rating indicating the level of content overlap between Option A and Option B.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_9.csv"
+            },
+            "extract": {
+              "column": "score_task_1_content"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "score_task_2_style",
+          "description": "A numerical rating indicating the level of style overlap between Option A and Option B.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_9.csv"
+            },
+            "extract": {
+              "column": "score_task_2_style"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "score_task_3_reasonableness",
+          "description": "A numerical rating indicating how reasonable Option B is as a continuation of the dialogue in chat_history column.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_9.csv"
+            },
+            "extract": {
+              "column": "score_task_3_reasonableness"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "model",
+          "description": "The name of the language model that generated Option B response.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_9.csv"
+            },
+            "extract": {
+              "column": "model"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "id_annotated",
+          "description": "The id of the annotated data point.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_9.csv"
+            },
+            "extract": {
+              "column": "id_annotated"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "name": "annotations",
+      "description": "Records extracted from the example table, with their schema.",
+      "fields": [
+        {
+          "@type": "cr:Field",
+          "name": "chat_history",
+          "description": "A string containing the full dialogue between the user and the assistant, with turns separated by newlines.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_10.csv"
+            },
+            "extract": {
+              "column": "chat_history"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "Option A",
+          "description": "A string containing the full dialogue between the user and the assistant, with turns separated by newlines.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_10.csv"
+            },
+            "extract": {
+              "column": "Option A"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "Option B",
+          "description": "A string representing the model output as a continuation to the conversation in chat_history column.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_10.csv"
+            },
+            "extract": {
+              "column": "Option B"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "score_task_1_content",
+          "description": "A numerical rating indicating the level of content overlap between Option A and Option B.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_10.csv"
+            },
+            "extract": {
+              "column": "score_task_1_content"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "score_task_2_style",
+          "description": "A numerical rating indicating the level of style overlap between Option A and Option B.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_10.csv"
+            },
+            "extract": {
+              "column": "score_task_2_style"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "score_task_3_reasonableness",
+          "description": "A numerical rating indicating how reasonable Option B is as a continuation of the dialogue in chat_history column.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_10.csv"
+            },
+            "extract": {
+              "column": "score_task_3_reasonableness"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "model",
+          "description": "The name of the language model that generated Option B response.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_10.csv"
+            },
+            "extract": {
+              "column": "model"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "id_annotated",
+          "description": "The id of the annotated data point.",
+          "dataType": "Text",
+          "source": {
+            "fileObject": {
+              "@id": "annotator_10.csv"
+            },
+            "extract": {
+              "column": "id_annotated"
+            }
+          }
+        }
+      ]
+    }
+
+  ]
+}

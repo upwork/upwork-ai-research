@@ -1,0 +1,1 @@
+For the original llm-arena dataset https://huggingface.co/datasets/lmsys/chatbot_arena_conversations, the user prompts are licensed under CC-BY-4.0, while the model outputs are licensed under CC-BY-NC-4.0. Our additional evaluation labels are licensed under CC-BY-4.0
